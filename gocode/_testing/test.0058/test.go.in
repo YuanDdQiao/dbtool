@@ -1,7 +1,0 @@
-package main
-
-import myast "go/ast"
-
-func main() {
-	myast.NewPack
-}
