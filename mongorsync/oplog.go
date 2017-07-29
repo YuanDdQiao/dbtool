@@ -71,7 +71,6 @@ func (rsync *MongoRsync) RsyncOplog() error {
 	entryAsOplog := db.Oplog{}
 	var totalOps int64
 	var entrySize int
-	var entryCount int64
 	var strStr bson.MongoTimestamp
 	// var barStr string
 
@@ -153,7 +152,7 @@ func (rsync *MongoRsync) RsyncOplog() error {
 
 		return fmt.Errorf("error,too stale to catch up: %v", rsync.oplogLastOptimeFor)
 	}
-	entryCount = 0
+
 	for iter.Next(rawOplogEntry) {
 
 		for len(rawOplogEntry.Data) == 0 {
@@ -182,8 +181,7 @@ func (rsync *MongoRsync) RsyncOplog() error {
 		}
 
 		totalOps++
-		entryCount += 1
-		oplogProgressor.IncOp(entryCount, int64(entrySize), entryAsOplog.Timestamp)
+		oplogProgressor.IncOp(int64(entrySize), entryAsOplog.Timestamp)
 		err = rsync.ApplyOps(session, []interface{}{entryAsOplog})
 		if err != nil {
 			return fmt.Errorf("error applying oplog: %v", err)
@@ -191,7 +189,6 @@ func (rsync *MongoRsync) RsyncOplog() error {
 		// log.Logf(log.Always, "Synced up to optime:%v", entryAsOplog.Timestamp)
 		// }
 		// barStr = "Last oplog " + string(entryAsOplog.Timestamp) + "\t"
-
 	}
 	iter.Close()
 

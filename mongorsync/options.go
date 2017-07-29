@@ -9,11 +9,11 @@ import (
 
 var Usage = `<options>
 
-rsync the content of a running server into target server.
+mongosync the content of a running server into target server.
 
-Specify a database with -d and a collection with -c to only rsync that database or collection.
+Specify a database with -d and a collection with -c to only sync that database or collection.
 
-See ... for more information.`
+See https://github.com/YuanDdQiao/dbtool/blob/master/README.md for more information.`
 
 // InputOptions defines the set of options to use in retrieving data from the server.
 type InputOptions struct {
@@ -27,7 +27,7 @@ type InputOptions struct {
 	OEt   string `long:"oEt" value-name:"<seconds>[:ordinal]" description:"only include oplog entries before the provided Timestamp"`
 
 	// OplogLimit                 string   `long:"oplogLimit" value-name:"<seconds>[:ordinal]" description:"only include oplog entries before the provided Timestamp"`
-	RsyncDBUsersAndRoles       bool     `long:"restoreDbUsersAndRoles" description:"restore user and role definitions for the given database"`
+	RsyncDBUsersAndRoles       bool     `long:"rsyncDBUsersAndRoles" description:"restore user and role definitions for the given database"`
 	ExcludedCollections        []string `long:"excludeCollection" value-name:"<collection-name>" description:"collection to exclude from the dump (may be specified multiple times to exclude additional collections)"`
 	ExcludedCollectionPrefixes []string `long:"excludeCollectionsWithPrefix" value-name:"<collection-prefix>" description:"exclude all collections from the dump that have the given prefix (may be specified multiple times to exclude additional prefixes)"`
 }

@@ -29,7 +29,7 @@ func (rsync *MongoRsync) RsyncIntents() error {
 	rsync.progressManager.Start()
 	defer rsync.progressManager.Stop()
 
-	log.Logf(log.DebugLow, "syncing up to %v collections in parallel", rsync.OutputOptions.NumParallelCollections)
+	log.Logf(log.DebugLow, "rsyncing up to %v collections in parallel", rsync.OutputOptions.NumParallelCollections)
 
 	if rsync.OutputOptions.NumParallelCollections > 0 {
 		resultChan := make(chan error)
@@ -213,7 +213,7 @@ func (rsync *MongoRsync) RsyncIntent(intent *intents.Intent) (bool, error) {
 	// finally, add indexes finished the db rsync ,but index and then.....
 	// log.Logf(log.Always, "indexes  where ..%v....syncing indexes for collection %v from", indexes, intent.Namespace())
 	if len(indexes) > 0 && !rsync.OutputOptions.NoIndexRsync {
-		log.Logf(log.Always, "syncing indexes for collection %v", intent.Namespace())
+		log.Logf(log.Always, "syncing indexes for collection %v from", intent.Namespace())
 		err = rsync.CreateIndexes(intent, indexes)
 		if err != nil {
 			return false, fmt.Errorf("error creating indexes for %v: %v", intent.Namespace(), err)
