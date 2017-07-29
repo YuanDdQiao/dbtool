@@ -11,7 +11,7 @@ Export the content of a running server into .bson files.
 
 Specify a database with -d and a collection with -c to only backup that database or collection.
 
-See http://docs.mongodb.org/manual/reference/program/mongobackup/ for more information.`
+See https://github.com/YuanDdQiao/dbtool/blob/master/README.md for more information.`
 
 // InputOptions defines the set of options to use in retrieving data from the server.
 type InputOptions struct {
@@ -50,7 +50,7 @@ type OutputOptions struct {
 	Repair                     bool     `long:"repair" description:"try to recover documents from damaged data files (not supported by all storage engines)"`
 	Oplog                      bool     `long:"oplog" description:"use oplog for taking a point-in-time snapshot"`
 	Archive                    string   `long:"archive" value-name:"<file-path>" optional:"true" optional-value:"-" description:"backup as an archive to the specified path. If flag is specified without a value, archive is written to stdout"`
-	BackupDBUsersAndRoles        bool     `long:"backupDbUsersAndRoles" description:"backup user and role definitions for the specified database"`
+	BackupDBUsersAndRoles      bool     `long:"backupDbUsersAndRoles" description:"backup user and role definitions for the specified database"`
 	ExcludedCollections        []string `long:"excludeCollection" value-name:"<collection-name>" description:"collection to exclude from the backup (may be specified multiple times to exclude additional collections)"`
 	ExcludedCollectionPrefixes []string `long:"excludeCollectionsWithPrefix" value-name:"<collection-prefix>" description:"exclude all collections from the backup that have the given prefix (may be specified multiple times to exclude additional prefixes)"`
 	NumParallelCollections     int      `long:"numParallelCollections" short:"j" description:"number of collections to backup in parallel (4 by default)" default:"4" default-mask:"-"`
