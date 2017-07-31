@@ -39,7 +39,7 @@ http://note.youdao.com/groupshare/?token=4D0F097593674F3092950429AA94B8CE&gid=14
 
 如果你想备份的快点，那就加大并发数 numParallelcollections ，如果不加--oplog 就和dump 一样的功能。
 
-备份后数据的目录结构和Mongodump一样。
+备份后数据的目录结构和Mongodump一样，还原的时候用Mongo自带的mongorestore 就可以还原。
 
 http://note.youdao.com/groupshare/?token=444814A15DF8474889ACF79105374E6C&gid=14716152
 
