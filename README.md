@@ -22,3 +22,17 @@ cd mongorsync-1.1/mongorsync/
 go build main/mongorsync.go
 
 同理 mongobackup 一样
+
+手里没机器了，就把图留了下来
+
+同步数据列子：
+
+http://note.youdao.com/groupshare/?token=4D0F097593674F3092950429AA94B8CE&gid=14716152
+
+备份列子：
+
+http://note.youdao.com/groupshare/?token=444814A15DF8474889ACF79105374E6C&gid=14716152
+
+http://note.youdao.com/groupshare/?token=E3CBDDB01470484D8D94E30E7B011A1A&gid=14716152
+
+
