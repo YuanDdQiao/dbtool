@@ -48,3 +48,13 @@ http://note.youdao.com/groupshare/?token=E3CBDDB01470484D8D94E30E7B011A1A&gid=14
 # 2017-8-24
 最后的感谢：希望帮忙点个star 呗！（此处是非奸诈的表情）
 
+
+如果不能编译：可直接下载二进制文件使用
+
+sync:
+
+https://note.youdao.com/share/?token=84A02F968C4D428494C4F28C2CBE7419&gid=14716152
+
+backup:
+
+https://note.youdao.com/share/?token=BBCA63D16A9146E8940DCFEF70C101A6&gid=14716152
