@@ -42,10 +42,8 @@ go build main/mongorsync.go
 备份后数据的目录结构和Mongodump一样，还原的时候用Mongo自带的mongorestore 就可以还原。
 
 ![image](https://github.com/YuanDdQiao/dbtool/blob/master/image/backup1.jpeg)
-http://note.youdao.com/groupshare/?token=444814A15DF8474889ACF79105374E6C&gid=14716152
 
 ![image](https://github.com/YuanDdQiao/dbtool/blob/master/image/backup2.jpeg)
-http://note.youdao.com/groupshare/?token=E3CBDDB01470484D8D94E30E7B011A1A&gid=14716152
 
 # 2017-8-24
 最后的感谢：希望帮忙点个star 呗！（此处是非奸诈的表情）
@@ -56,10 +54,6 @@ http://note.youdao.com/groupshare/?token=E3CBDDB01470484D8D94E30E7B011A1A&gid=14
 sync:
 https://github.com/YuanDdQiao/dbtool/tree/master/binDownload/MongoSyncTools
 
-https://note.youdao.com/share/?token=84A02F968C4D428494C4F28C2CBE7419&gid=14716152
-
 backup:
 
 https://github.com/YuanDdQiao/dbtool/tree/master/binDownload/MongoBackUp
-
-https://note.youdao.com/share/?token=BBCA63D16A9146E8940DCFEF70C101A6&gid=14716152
